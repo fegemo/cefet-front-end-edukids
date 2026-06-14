@@ -2,12 +2,14 @@
 
 ![](docs/edukids-final.png)
 
-Seus pais vão viajar e você deve cuidar do seu mini irmãozinho de 3 anos.
+[Baixe o código seminal.][baixar-atividade] Seus pais vão viajar e você deve cuidar do seu mini irmãozinho de 3 anos.
 
 Com um comportamento de anjinho das trevas, o pequeno Joãozinho vai precisar ser
 entretido por um bom tempo. Você, como um ótimo irmã(ão) e programador(a)
 exímio, decide que é hora de criar um jogo Web para, além de entreter seu
 mini-irmão, ensiná-lo como falar o nome de alguns animais.
+
+[baixar-atividade]: https://github.com/fegemo/cefet-front-end-edukids
 
 
 ## Atividade
@@ -59,11 +61,26 @@ Você pode usar essa informação para definir o tempo das
 animações em CSS.
 
 
-**Desafios**:
+### Desafio 1
 
-- Faça uma das situações ter mais de uma animação (veja no FAQ)
-- Coloque um efeito tridimensional (de profundidade) em alguma animação
-  (veja no FAQ)
+Faça uma das situações ter mais de uma animação (veja no [FAQ](#faq)).
+
+
+### Desafio 2
+
+Coloque um efeito tridimensional (de profundidade) em alguma animação
+(veja no [FAQ](#faq)).
+
+
+### Desafio 3
+
+Torne esta pasta um repositório git, publique-o no Github e ative
+o serviço Github Pages para que você possa hospedar a página
+publicamente e mostrar pra sua família em:
+
+https://SEU_USUARIO.github.io/cefet-front-end-edukids
+
+
 
 ## FAQ
 
@@ -77,7 +94,7 @@ animações em CSS.
 1. Como posso criar uma animação?
    Uma animação é composta por uma sequência de quadros (`@keyframes`) e
    uma propriedade `animation` em um elemento. Veja mais nos
-   [slides sobre como criar animações].[criando-uma-animacao].
+   [slides sobre como criar animações][criando-uma-animacao].
 1. Posso fazer mais de uma animação em sequência?
    - Sim! Basta colocar duas animações, separadas por vírgula, como valor
      da propriedade `animation`. Além disso, a segunda animação deve ter um
@@ -87,11 +104,16 @@ animações em CSS.
    - A transformação aplicada deve, de alguma forma, 
      alterar a coordenada Z do objeto 
      (eg, rotateX e rotateY).
-   - O **container do elemento que sofreu a transformação**
+   - O **_container_ do elemento que sofreu a transformação**
      deve ter um valor de propriedade `perspective` com
-     uma distância (normalmente algo entre 400px e 900px).
+     uma distância (normalmente algo entre 400px e 900px). No caso
+     desta página, cada `.animal` está dentro de um `.container-animal` (que é quem deve ter a 
+     propriedade `perspective`) definida com um valor. Veja a imagem
+     a seguir em que o _container_ possui diferentes valores
+     para essa propriedade:
+     ![](imgs/efeito-de-perspectiva.webp)
 
 [criando-uma-animacao]: https://fegemo.github.io/cefet-front-end/classes/css6/#criando-uma-animacao
-[transition-ou-animation]: https://fegemo.github.io/cefet-front-end/classes/css6/#transition-ou-animation
+[transition-ou-animation]: https://fegemo.github.io/cefet-front-end/classes/css6/#animation-ou-transition
 [transformacoes]: https://fegemo.github.io/cefet-front-end/classes/css6/#transformacoes
 [mais-de-uma-animacao]: https://fegemo.github.io/cefet-front-end/classes/css6/#mais-de-uma-animacao

@@ -11,9 +11,9 @@
 /* Exercício 1: Criar uma transição para quando o mouse estiver em cima dos
  * botões play/stop (para que o elemento se revele lentamente)
  */
- #controles ul {
+#controles ul {
 
- }
+}
 
 /*
  * Exercício 2: Você deve implementar uma metáfora visual para cada um dos 4
@@ -42,5 +42,12 @@
 }
 
 .atacando {
+
+}
+
+
+/* Desafio 2: para efeito 3D, precisa
+   configurar o perspective do pai do .animal */
+.container-animal {
 
 }
