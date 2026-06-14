@@ -4,17 +4,18 @@
 
 Seus pais vão viajar e você deve cuidar do seu mini irmãozinho de 3 anos.
 
-Com um comportamento de anjinho (#sqn), o pequeno Joãozinho vai precisar ser
+Com um comportamento de anjinho das trevas, o pequeno Joãozinho vai precisar ser
 entretido por um bom tempo. Você, como um ótimo irmã(ão) e programador(a)
 exímio, decide que é hora de criar um jogo Web para, além de entreter seu
 mini-irmão, ensiná-lo como falar o nome de alguns animais.
+
 
 ## Atividade
 
 O jogo funciona assim:
 
 - Assim que apertar **play**, o jogo começa
-- A cada ~2s, um animal é sorteado e começa a ficar agitado, com fome
+- A cada ~5s, um animal é sorteado e começa a ficar agitado, com fome
 - Você deve clicar no animal agitado para alimentá-lo antes que ele coma
   alguém
   - Fazendo isso, ganha-se 1 ponto
@@ -30,13 +31,16 @@ Toda essa funcionalidade **já está implementada**. O que está **faltando**:
    fica **adicionando e removendo classes dos elementos** dos animais
    - `com-fome`, quando o animal está com fome
    - `satisfeito`, quando o animal acabou de comer
-   - `com-raiva`, quando um animal sossegado é perturbado
+   - `foi-incomodado`, quando um animal sossegado é perturbado
    - `atacando`, quando um animal com fome não é alimentado a tempo
+
 
 ### Exercício 1
 
-Criar uma **transição para quando o mouse estiver em cima dos botões**
-   _play/stop_ (para que o elemento se revele lentamente)
+Crie uma **transição para quando o mouse estiver em cima dos botões**
+   _play/stop_ (para que o elemento se revele lentamente). Veja em `exercicio.css` qual propriedade CSS está sendo usada para que os botões
+   fiquem escondidos ou visíveis, e crie uma transição. 
+
 
 ### Exercício 2
 
@@ -45,8 +49,15 @@ animais. Algumas **sugestões** (mas **não se atenha a elas**):
 
 - a) `com-fome`, animal piscando (opacidade variando)
 - b) `satisfeito`, uma borda verde no animal e o animal fica girando de alegria
-- c) `com-raiva`, animal vai crescendo, ou fica pulsando
+- c) `foi-incomodado`, animal vai crescendo, ou fica pulsando
 - d) `atacando`, animal dá um salto e cresce, com uma borda vermelha
+
+
+O arquivo `exercicio.css`, que é onde você deve trabalhar,
+informa quanto tempo um animal fica em cada situação.
+Você pode usar essa informação para definir o tempo das
+animações em CSS.
+
 
 **Desafios**:
 
@@ -66,12 +77,19 @@ animais. Algumas **sugestões** (mas **não se atenha a elas**):
 1. Como posso criar uma animação?
    Uma animação é composta por uma sequência de quadros (`@keyframes`) e
    uma propriedade `animation` em um elemento. Veja mais nos
-   [slides sobre como criar animações][criando-uma-animacao].
+   [slides sobre como criar animações].[criando-uma-animacao].
 1. Posso fazer mais de uma animação em sequência?
    - Sim! Basta colocar duas animações, separadas por vírgula, como valor
      da propriedade `animation`. Além disso, a segunda animação deve ter um
      `animation-delay` igual à duração da primeira. Veja no
      [slide sobre mais de uma animação][mais-de-uma-animacao].
+1. Para ter um efeito 3D, são necessárias duas coisas:
+   - A transformação aplicada deve, de alguma forma, 
+     alterar a coordenada Z do objeto 
+     (eg, rotateX e rotateY).
+   - O **container do elemento que sofreu a transformação**
+     deve ter um valor de propriedade `perspective` com
+     uma distância (normalmente algo entre 400px e 900px).
 
 [criando-uma-animacao]: https://fegemo.github.io/cefet-front-end/classes/css6/#criando-uma-animacao
 [transition-ou-animation]: https://fegemo.github.io/cefet-front-end/classes/css6/#transition-ou-animation

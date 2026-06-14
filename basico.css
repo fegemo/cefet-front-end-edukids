@@ -6,7 +6,7 @@
  * Elementos gerais
  */
 
-html, body {
+body {
   min-height: 100vh;
 }
 
@@ -177,7 +177,7 @@ body {
   transition: border-color 250ms ease-out;
 }
 
-.animal:not(.satisfeito):not(.com-raiva):not(.atacando):hover {
+.animal:not(.satisfeito):not(.foi-incomodado):not(.atacando):hover {
   border-color: silver;
 }
 

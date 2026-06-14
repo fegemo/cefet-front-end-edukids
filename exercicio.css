@@ -20,8 +20,14 @@
  * estados dos animais. Algumas *sugestões*:
  *   - com-fome: animal piscando (opacidade variando)
  *   - satisfeito: uma borda verde no animal e o animal fica girando de alegria
- *   - com-raiva: animal fica pulsando
+ *   - foi-incomodado: animal fica pulsando (grande/pequeno) e com uma borda
  *   - atacando: animal dá um salto e cresce, com uma borda vermelha
+ *
+ * O tempo que um animal fica em cada situação é:
+ *   - com-fome: pelo menos 4 segundos
+ *   - satisfeito: 1 segundo
+ *   - foi-incomodado: 1 segundo
+ *   - atacando: 1 segundo
  */
 .com-fome {
 
@@ -31,7 +37,7 @@
 
 }
 
-.com-raiva {
+.foi-incomodado {
 
 }
 
