@@ -9,7 +9,7 @@ entretido por um bom tempo. Você, como um ótimo irmã(ão) e programador(a)
 exímio, decide que é hora de criar um jogo Web para, além de entreter seu
 mini-irmão, ensiná-lo como falar o nome de alguns animais.
 
-[baixar-atividade]: https://github.com/fegemo/cefet-front-end-edukids
+[baixar-atividade]: https://github.com/fegemo/cefet-front-end-edukids/archive/refs/heads/gh-pages.zip
 
 
 ## Atividade
@@ -61,25 +61,46 @@ Você pode usar essa informação para definir o tempo das
 animações em CSS.
 
 
-### Desafio 1
+### Desafio 1: Mais de uma Animação
 
 Faça uma das situações ter mais de uma animação (veja no [FAQ](#faq)).
 
 
-### Desafio 2
+### Desafio 2: Efeito 3D
 
 Coloque um efeito tridimensional (de profundidade) em alguma animação
 (veja no [FAQ](#faq)).
 
 
-### Desafio 3
+### Desafio 3: Publicando
 
-Torne esta pasta um repositório git, publique-o no Github e ative
+Primeiramente, vamos configurar a página para ser compartilhada. Sabe quando
+você envia um link pelo WhatsApp e ele mostra uma fotinha/descrição da página
+que está sendo compartilhada? Pois é, bora fazer isso.
+
+Comece ao colocar seu nome em alguns lugares da página:
+1. No arquivo `index.html`, faça uma busca com substituição 
+   (comando <kbd>Ctrl</kbd>+<kbd>h</kbd>) para trocar todas as ocorrências 
+   de `Edukids Animals` por `Edukids Agripino` (claro, se seu nome for 
+   Agripino... senão, ponha seu nome).
+1. Ainda em `index.html`, modifique toda URL que aponta para o repositório 
+   do professor para a URL do seu próprio repositório, que você irá publicar:
+   - Onde está `https://fegemo.github.io/cefet-front-end-edukids/`, mude para 
+     `https://USER-DO-AGRIPINO.github.io/cefet-front-end-edukids/`, onde 
+     `USER-DO-AGRIPINO` é o seu usuário no Github.
+     - Tem que trocar isso em 4 lugares. 
+1. Em `manifest.json`, modifique `Edukids Animals` por `Edukids Agripino` 
+   (seu nome).
+
+Depois, vamos tornar a pasta um repositório git e publicá-la. Comece renomeando
+a pasta para `cefet-front-end-edukids`. Em seguida, torne-a um repositório git, 
+depois publique-o no Github com nome `cefet-front-end-edukids` e ative
 o serviço Github Pages para que você possa hospedar a página
 publicamente e mostrar pra sua família em:
 
-https://SEU_USUARIO.github.io/cefet-front-end-edukids
+[https://SEU_USUARIO.github.io/cefet-front-end-edukids](https://SEU_USUARIO.github.io/cefet-front-end-edukids)
 
+Por fim, envie a URL para toda a família =)
 
 
 ## FAQ
