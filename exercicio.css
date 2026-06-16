@@ -47,7 +47,9 @@
 
 
 /* Desafio 2: para efeito 3D, precisa
-   configurar o perspective do pai do .animal */
+ * configurar o perspective do pai do .animal 
+ *
+ */
 .container-animal {
 
 }

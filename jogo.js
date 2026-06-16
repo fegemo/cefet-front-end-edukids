@@ -35,8 +35,6 @@ const elementoPontuacao = document.querySelector('#pontuacao');
 
 let temporizadorProximoAnimal = null;
 let temporizadorComando = null;
-let temporizadorSatisfeito = null;
-let temporizadorComRaiva = null;
 let pontuacao = {
   pontos: 0
 };
@@ -69,7 +67,7 @@ function preencheAnimaisNaTela() {
   telaEl.innerHTML = markupAnimais;
   const elementosAnimais = document.querySelectorAll('.animal');
   for (let animalEl of elementosAnimais) {
-    animalEl.addEventListener('click', e => darComidaParaAnimal(e.currentTarget));
+    animalEl.addEventListener('click', darComidaParaAnimal);
   }
 }
 
@@ -82,16 +80,14 @@ function alteraEstadoDoAnimal(animalEl, novoEstado) {
 
     case 'satisfeito':
       // registra para voltar ao normal daqui x segundos
-      clearTimeout(temporizadorSatisfeito);
-      temporizadorSatisfeito = setTimeout(() => {
+      setTimeout(() => {
         animalEl.classList.remove('satisfeito');
       }, DURACAO_ANIMACAO_SATISFEITO);
       break;
 
     case 'foi-incomodado':
       // registra para voltar ao normal daqui x segundos
-      clearTimeout(temporizadorComRaiva);
-      temporizadorComRaiva = setTimeout(() => {
+      setTimeout(() => {
         animalEl.classList.remove('foi-incomodado');
       }, DURACAO_ANIMACAO_COM_RAIVA);
       break;
@@ -124,7 +120,8 @@ function escolheAnimal() {
   return {animal: animalSorteado, el: sorteadoEl};
 }
 
-function darComidaParaAnimal(animalEl) {
+function darComidaParaAnimal(e) {
+  const animalEl = e.currentTarget;
   if (animalEl.classList.contains('com-fome')) {
     // animal com fome foi clicado - ganha 1 ponto
     atualizaPontuacao(pontuacao.pontos + 1);
@@ -175,6 +172,7 @@ function loopDoJogo() {
 }
 
 function comecar() {
+  parar();
   atualizaPontuacao(0);
   animais = sorteiaAnimaisDaPartida(6);
   preencheAnimaisNaTela();
@@ -183,6 +181,7 @@ function comecar() {
 
 function parar() {
   clearTimeout(temporizadorProximoAnimal);
+  clearTimeout(temporizadorComando);
   const elementoAnimais = document.querySelectorAll('.animal');
 
   for (let animalEl of elementoAnimais) {
